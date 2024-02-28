@@ -1,0 +1,13 @@
+{'cu_id':'DUMMY_ID0', 'learning_group': '1,2', 'url':'DUMMY_URL/datatypes', 'pre':'', 'content_type':'text'}
+{'cu_id':'DUMMY_ID1', 'learning_group': '1,2', 'url':'DUMMY_URL/statements', 'pre':'DUMMY_ID0', 'content_type':'text'}
+{'cu_id':'DUMMY_ID2', 'learning_group': '1,2', 'url':'DUMMY_URL/functions', 'pre':'DUMMY_ID1', 'content_type':'text'}
+{'cu_id':'DUMMY_ID3', 'learning_group': '1,2', 'url':'DUMMY_URL/conditionsloops', 'pre':'DUMMY_ID1', 'content_type':'text'}
+{'cu_id':'DUMMY_ID4', 'learning_group': '2', 'url':'DUMMY_URL/class', 'pre':'DUMMY_ID2', 'content_type':'text'}
+{'cu_id':'DUMMY_ID5', 'learning_group': '2', 'url':'DUMMY_URL/filesystempackage', 'pre':'DUMMY_ID4', 'content_type':'text'}
+{'cu_id':'DUMMY_ID6', 'learning_group': '2', 'url':'DUMMY_URL/datapackage', 'pre':'DUMMY_ID4', 'content_type':'text'}
+{'cu_id':'DUMMY_ID7', 'learning_group': '2', 'url':'DUMMY_URL/otherthirdpartypackage', 'pre':'DUMMY_ID4', 'content_type':'text'}
+{'cu_id':'DUMMY_ID8', 'learning_group': '2', 'url':'DUMMY_URL/bestpractise', 'pre':'DUMMY_ID1', 'content_type':'text'}
+{'cu_id':'DUMMY_ID9', 'learning_group': '3', 'url':'DUMMY_URL/re', 'pre':'', 'content_type':'text'}
+{'cu_id':'DUMMY_ID10', 'learning_group': '3', 'url':'DUMMY_URL/datastructure', 'pre':'', 'content_type':'text'}
+{'cu_id':'DUMMY_ID11', 'learning_group': '3', 'url':'DUMMY_URL/algo', 'pre':'DUMMY_ID10', 'content_type':'text'}
+{'cu_id':'DUMMY_ID12', 'learning_group': '1,2,3', 'url':'DUMMY_URL/application', 'pre':'DUMMY_ID3,DUMMY_ID7,DUMMY_ID11', 'content_type':'text'}
