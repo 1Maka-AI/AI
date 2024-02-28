@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 import queue
 import threading
-import uuid
 import time
-from openai import OpenAI
-import azure.functions as func
+import uuid
+from flask import Flask, request, jsonify
 from json import dumps, loads
+from openai import OpenAI
 
 
-app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+app = Flask(__name__)
 
 
 # Object represents each questionnaire input by a user
@@ -138,7 +138,7 @@ class AiTutor:
         self.client = OpenAI()
         
         
-    def _ask(self, content, question):
+    def _ask(self, question, content = ''):
         message = self._message_generator(content, question) 
         completion = self.client.chat.completions.create(
         model=self.model_name,
@@ -146,22 +146,14 @@ class AiTutor:
         )
         return completion.choices[0].message
     
-    @app.route(route="ask", methods=["POST"])
-    def ask_api(self, req):
-        try:
-            payload = req.get_body().decode(encoding='utf-8', errors='strict')
-            result = self._ask(loads(payload))
-            return func.HttpResponse(body=dumps(result), status_code=200, mimetype="application/json", charset="utf-8")
-        except Exception as e:
-            return func.HttpResponse(str("Something went wrong, please try again."), status_code=500)
-    
     def _message_generator(self, content, question):
-        if self.objective:
+        msg = []
+        if self.objective and content:
             msg = [{
                         "role": "system",
                         "content": f"You are a {self.role}. Your objective is {self.objective}. You are currently teaching {content}"
                     }]
-        else:
+        elif content:
             msg = [{
                         "role": "system",
                         "content": f"You are a {self.role}. You are currently teaching {content}"
@@ -172,5 +164,20 @@ class AiTutor:
                     })
         return msg
 
+    @app.route('/ask', methods=['POST'])
+    def ask_api(self, req):
+        try:
+            request_data = req.json
+            content = request_data.get('topic')
+            question = request_data.get('question')
+            if question is None:
+                return jsonify({"error": "Missing arguments"}), 400
+            result = self._ask(content, question)
+            return jsonify(result), 200
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+        
+    def run(self):
+        app.run(debug=True)
         
 
