@@ -105,7 +105,7 @@ class CurriculumProcess:
                         "content": f"rewrite the following content with example or scenario under {interest}: {content}"
                     }]
         completion = client.chat.completions.create(
-        model=self.model_name,
+        model=self.txt_model_name,
         messages=message,
         )
         pcontent = completion.choices[0].message
