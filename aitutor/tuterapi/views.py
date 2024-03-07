@@ -15,7 +15,7 @@ class AiTutor:
         self.model_name = model_name
         self.role = role
         self.objective = objective
-        self.client = OpenAI(api_key = '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')
+        self.client = OpenAI()
         
         
     def ask(self, question, content = ''):
