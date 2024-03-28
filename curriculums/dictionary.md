@@ -16,228 +16,258 @@ What:As the ASV Starlight hurtled through the depths of space, its once pristine
 3. Power fluctuations plague the propulsion system: The storm's electromagnetic onslaught wreaked havoc on the ship's power distribution network, resulting in erratic fluctuations that crippled the propulsion system. Without a stable power supply, the engines sputtered and faltered, leaving the ASV Starlight adrift amidst the vast expanse of interstellar space.
 
 In the wake of this devastation, Alex and Mao are faced with the daunting task of navigating the labyrinthine corridors of their damaged vessel, assessing the extent of the destruction, and devising a plan to effect repairs before their life support systems fail completely. With each passing moment, the cold void of space looms ever closer, underscoring the urgency of their mission and the dire consequences of failure.
-<h2>syllabus</h2>1. "The Broken Windows" <ul><li> mission: Repair the shattered windows of the ASV Starlight and prevent the loss of atmospheric pressure, knowledge: Introduce the concept of dictionaries and how to access and modify values using keys.</li></ul>2. "Water Woes" <ul><li> mission: Fix the compromised water circulation system and prevent the loss of precious resources, knowledge: Teach how to use built</li></ul>3. "Power Struggle" <ul><li> mission: Restore stable power supply to the propulsion system and keep the ASV Starlight from drifting into the void, knowledge: Show how to loop through dictionaries and perform operations on each key</li></ul>4. "Navigating the Maze" <ul><li> mission: Navigate through the damaged corridors of the ship and assess the extent of the destruction, knowledge: Demonstrate how to use nested dictionaries to represent complex data structures.</li></ul>5. "The Final Countdown" <ul><li> mission: Devise a plan to effect repairs before the life support systems fail, knowledge: Teach how to use dictionaries to store and retrieve information efficiently for problem</li></ul><h2>curriculum</h2><h3>1. "The Broken Windows" </h3>
+<h2>syllabus</h2>Broken parts<ul><li>missing: Get to know all the broken parts and understand how to fix the different parts, knowledge: Introduce the concept of dictionaries and how to access and modify values using keys.</li></ul>The tools we have<ul><li>missing: Get to know what tools in our ship, knowledge: Teach how to use built.</li></ul>Fix window<ul><li>missing: Repair the shattered windows of the ASV Starlight and prevent the loss of atmospheric pressure, knowledge: Show how to loop through dictionaries and perform operations on each key.</li></ul>Fix water system<ul><li>mission: Fix the compromised water circulation system and prevent the loss of precious resources, knowledge: Demonstrate how to use nested dictionaries to represent complex data structures.</li></ul>Fix enigne<ul><li>mission: Finally fix the engine and get the ship back to normal, knowledge: Learn to combine all the dictionary knowledge to solve complicated problem.</li></ul><h2>curriculum</h2><h3>Broken parts</h3>
 
-Title: The Broken Windows
+Curriculum Title: Broken Parts - Introduction to Dictionaries
+Mission: Retrieve the Lost Parts
 
-Mission: Repair the shattered windows of the ASV Starlight and prevent the loss of atmospheric pressure.
+[Mao]: Hey there Alex, welcome to our coding adventure! Today, we'll be exploring the world of dictionaries and how to use them to fix broken parts in our code. Are you ready to embark on this journey?
 
-Mao: Welcome, young coders! Today, we have a very important mission. The ASV Starlight, our spaceship, has encountered a problem. The windows have been shattered and we need to repair them before we lose atmospheric pressure. But don't worry, we have dictionaries on our side to help us out.
+[Alex]: Yes, I am! I'm excited to learn about dictionaries.
 
-Learner: What are dictionaries?
+[Mao]: Great! Let's begin. Dictionaries are like a special type of list that allows us to store data in key-value pairs. Keys are like labels that help us identify the values associated with them. Imagine a dictionary as a toolbox, where each key is a specific tool and each value is the function of that tool.
 
-Mao: Dictionaries are a data structure in Python that allows us to store data in key-value pairs. The key is like a label and the value is the actual data. Think of it like a real-life dictionary where you look up a word and find its meaning.
+[Alex]: That's a cool way to think about it.
 
-Learner: How do we use dictionaries?
+[Mao]: Now, let's say we have a broken robot and we need to retrieve its lost parts. We can use a dictionary to keep track of the parts and their functions. Let's create a dictionary for our robot, with the keys as the parts and the values as their functions.
 
-Mao: First, we need to create a dictionary. We do that by using curly braces and separating the key-value pairs with a colon. Let's create a dictionary for the windows of our spaceship. The keys will be the window numbers and the values will be the state of the window - either broken or repaired.
+[Alex]: How do we do that?
 
-Learner: How do we access and modify values in a dictionary?
+[Mao]: We use curly braces {} to enclose our dictionary and separate the key-value pairs with a colon (:). For example, our dictionary would look like this: {"head": "controls vision", "arms": "grabs objects", "legs": "moves the robot"}. Got it?
 
-Mao: We can access a value by using its key. For example, to see the state of window number 3, we would use the key "3". And to modify a value, we simply assign a new value to the key. So if we want to mark window number 3 as repaired, we would use the key "3" and assign it the value "repaired".
+[Alex]: Yes, I think so.
 
-Learner: That sounds simple enough. How can we use dictionaries to help us with our mission?
+[Mao]: Now, let's move on to accessing and modifying values in a dictionary. Just like how we use the index number in a list to access an element, we use the key in a dictionary to access its value. For example, if we want to access the function of the arms, we use the key "arms" and it will return "grabs objects".
 
-Mao: Well, we need to know which windows are broken and which ones are repaired, right? So let's create a function that checks the state of each window and tells us which ones need to be repaired. We can use a for loop to go through each key-value pair in the dictionary and check if the value is "broken".
+[Alex]: That's simple enough.
 
-Learner: That's a great idea! But how do we know which ones need to be repaired?
+[Mao]: Now, imagine if we wanted to change the function of the arms. We can simply reassign the value using its key. So, if we want the arms to now have the function of "shoots laser beams", we can simply do that by using "arms" as the key and "shoots laser beams" as the new value.
 
-Mao: Ah, that's where the game comes in. I've created a puzzle game where you have to match the correct window number with its state. If you get it right, the window will be marked as repaired in the dictionary. Are you ready to play?
+[Alex]: Oh, I see. That's really useful.
 
-Learner: Yes, let's do it!
+[Mao]: Now, let's put our knowledge to the test. I have hidden a puzzle game in our coding environment. Your mission is to solve the puzzle and retrieve the lost parts for our robot. Are you ready for the challenge?
 
-[After the game]
+[Alex]: Yes, let's do it!
 
-Mao: Great job, you repaired all the broken windows! Now we can prevent the loss of atmospheric pressure in our spaceship. But remember, dictionaries are not just limited to this mission. They can be used in many other scenarios to store and retrieve data efficiently.
+[Mao]: Great! Remember to use dictionaries to keep track of the parts and their functions. Good luck, Alex!
 
-Learner: Thanks for teaching us about dictionaries, Mao. I can't wait to use them in my own coding projects!
+Curriculum Title: Broken Parts - Retrieving and Fixing
+Mission: Fix the Broken Robot
 
-Mao: You're welcome, young coders. Always remember, with the power of dictionaries, anything is possible!---<h3>2. "Water Woes" </h3>
+[Mao]: Welcome back, Alex! Did you successfully retrieve the lost parts for our robot?
 
-Title 2: "Water Woes"
+[Alex]: Yes, I did! I used a dictionary to keep track of the parts and their functions.
+
+[Mao]: That's great! Now, let's move on to the next part of our journey - fixing the broken robot. Dictionaries also allow us to add new key-value pairs and delete existing ones. This will come in handy when we need to fix our robot.
+
+[Alex]: How do we add a new key-value pair?
+
+[Mao]: We use the same syntax as before, but we add a new key and its value. For example, let's say we found a new part for our robot, a jetpack. We can add it to our dictionary by using "jetpack" as the key and "propels the robot" as the value.
+
+[Alex]: And how do we delete a key-value pair?
+
+[Mao]: We use the keyword "del" followed by the key we want to delete. For example, if we want to remove the legs from our dictionary, we use "del legs" and it will be removed from the dictionary.
+
+[Alex]: I think I understand now.
+
+[Mao]: Great! Now, let's put our skills to the test once again. I have created another puzzle game for you to solve. This time, you will need to use your knowledge of dictionaries to fix our broken robot. Are you ready for the challenge?
+
+[Alex]: Yes, let's do this!
+
+[Mao]: Good luck, Alex! And remember, dictionaries are your best friend when it comes to keeping track of parts and their functions. Have fun fixing the robot!<h3>The tools we have</h3>
+
+Title: The Tools We Have
 
 Mission:
-Welcome to your next coding adventure! Today, we will be facing a serious problem - our water circulation system has been compromised and we need to fix it before we lose all our precious water resources. Are you ready to take on this challenge? Let's go!
-
-Introduction:
-Before we start, let's quickly review what we have learned so far about dictionaries. Do you remember what a dictionary is used for? That's right, it's a data structure that stores information in key-value pairs. And how do we access the values in a dictionary? We use the keys, just like how we use a dictionary in real life to find the meaning of a word. Great job!
-
-Game 1:
-As we make our way through the water plant, we come across a puzzle. The puzzle consists of three pipes, each labeled with a letter - A, B, and C. Our task is to connect the pipes in the correct order to restore the water circulation system. But wait, there's a twist - the labels on the pipes are actually the keys to a dictionary. Can you use your knowledge of dictionaries to figure out the correct order to connect the pipes?
-
-Dialogues:
-Mao: "Look, we've come across a puzzle. It seems like the labels on the pipes are actually the keys to a dictionary. Can you use your knowledge of dictionaries to help us solve this puzzle?"
-Learner:
-Mao: "Great job! You connected the pipes in the correct order and restored the water circulation system. Let's keep going!"
-
-Teaching:
-Now that we have solved the puzzle, let's learn how to use the built-in functions of dictionaries. One useful function is the .keys() function, which returns a list of all the keys in a dictionary. Another useful function is the .values() function, which returns a list of all the values in a dictionary. These functions will come in handy when we need to access and manipulate the data in our dictionaries.
-
-Game 2:
-As we continue our journey, we encounter a second puzzle. This time, we need to use our knowledge of dictionaries to fill in the missing values for certain keys. Can you solve this puzzle and help us complete the missing information?
-
-Dialogues:
-Mao: "Uh oh, it seems like some of the values in our dictionary are missing. Can you use your knowledge of dictionaries to fill in the blanks?"
-Learner:
-Mao: "Well done! You have successfully completed the missing information in our dictionary. Now we have all the necessary data to fix the water circulation system."
-
-Conclusion:
-Congratulations on completing our mission! With your knowledge of dictionaries and problem-solving skills, we were able to fix the compromised water circulation system and prevent the loss of precious resources. Remember to keep practicing and using dictionaries in your coding journey, as they are a powerful tool for storing and accessing data. See you in our next adventure!---<h3>3. "Power Struggle" </h3>
-
-Title 3: Power Struggle
-
-Introduction:
-Welcome back, young coders! We have another adventure ahead of us as we continue our journey through the world of coding. Today, we will be facing a power struggle on our ASV Starlight. Our propulsion system is malfunctioning and the ASV is drifting into the void. It is up to us to restore the stable power supply and save the ASV from certain doom. But don't worry, we have our trusty learning companion, Mao, to guide us through this mission. Are you ready?
+Welcome aboard, Alex! I am Mao, your virtual learning companion. Our mission today is to explore and learn about the tools we have on our ship. Are you ready?
 
 Dialogue:
-Mao: Hello, my dear coders! Are you ready for our next mission?
-Learner: Yes, I am ready!
-Mao: Great! Our ASV Starlight is in trouble and we need to fix the power supply before it drifts into the void. Let's get started by learning about dictionaries.
-
-Lesson:
-Mao: Dictionaries are a data type in Python that stores key-value pairs. They are similar to lists, but instead of using indexes, we use keys to access the values. Let's see an example.
-
-Code:
-my_dict = {"name": "Mao", "age": 14, "hobby": "coding"}
-print(my_dict["hobby"])
-
-Explanation:
-Here, we have a dictionary named my_dict with three key-value pairs: name with the value "Mao", age with the value 14, and hobby with the value "coding". To access the value of a specific key, we use square brackets after the dictionary name and inside, we write the key we want to access. So in this case, we are printing the value of the key "hobby", which is "coding".
-
-Mao: Now, let's see how we can loop through a dictionary and perform operations on each key. This will be useful in our mission.
-
-Code:
-for key in my_dict:
-    print(key)
-
-Explanation:
-Here, we are using a for loop to iterate through the keys in our dictionary. We are storing each key in the variable key and printing it. This will print out all the keys in our dictionary.
-
-Puzzle Game:
-Mao: Now, let's put our knowledge to the test with a puzzle game. I will give you a dictionary and you have to use a for loop to print out all the values in the dictionary.
-Learner: Alright, I'm ready!
-
-Code:
-my_puzzle_dict = {"animal": "elephant", "color": "blue", "food": "pizza"}
-# Write your code here
-
-Explanation:
-The correct code would be:
-for value in my_puzzle_dict.values():
-    print(value)
-This will print out all the values in the dictionary: elephant, blue, and pizza.
-
-Mao: Great job, young coders! You have successfully completed the puzzle game. Now, let's move on to our mission.
-
-Mission:
-Mao: Our ASV Starlight is still drifting towards the void. We need to restore the stable power supply to the propulsion system. We have a dictionary named power_supply that contains the power levels for each component. We need to increase the power level for each component by 10. Can you do it?
-
-Learner: Yes, I can do it!
-Mao: Great! Remember to use a for loop to iterate through the dictionary and update the values for each key.
-
-Code:
-power_supply = {"engine": 50, "sensors": 40, "fuel": 20}
-# Write your code here
-
-Explanation:
-The correct code would be:
-for key in power_supply:
-    power_supply[key] += 10
-This will update the values for each key by adding 10 to the current value. So our new power supply dictionary would be: {"engine": 60, "sensors": 50, "fuel": 30}.
-
-Mao: Fantastic job, young coders! You have successfully restored the stable power supply to the propulsion system. Our ASV Starlight is now back on track. You have completed another mission and learned how to loop through dictionaries and perform operations on each key. I am proud of you!
-
-Conclusion:
-Congratulations on completing the power struggle mission, young coders! You have shown great skills in coding and problem-solving. Dictionaries are a powerful tool in Python and you now know how to use them to your advantage. Keep practicing and stay tuned for our next adventure! See you soon!---<h3>4. "Navigating the Maze" </h3>
-
-Title 4: Navigating the Maze
-
-Introduction:
-Welcome back, young coders! Today, we will be taking on a new challenge as we navigate through the maze of a damaged spaceship. But don't worry, our trusty virtual learning companion, Mao, will be here to guide us through this mission. Along the way, we will also learn about nested dictionaries and how they can help us represent complex data structures.
-
-Mission:
-Our mission is to navigate through the damaged corridors of the spaceship and assess the extent of the destruction. But be careful, there may be obstacles and puzzles along the way that we will need to solve using our coding skills. Are you ready?
-
-Game Part 1:
-As we enter the maze, we come across a locked door with a keypad. Mao suggests that we use a nested dictionary to represent the possible combinations for the keypad. Let's create a dictionary called "keypad" and add the numbers 0-9 as keys, with their corresponding combinations as values. Now, we can use an if statement to check if the input matches the correct combination. Let's give it a try!
-
-Game Part 2:
-As we continue through the maze, we encounter a puzzle where we need to find the correct path to the next room. Mao suggests using a nested dictionary to represent the different paths and their corresponding directions. Let's create a dictionary called "paths" and add the possible paths as keys, with the directions as values. Now, we can use a loop to go through each path and ask the user to input their chosen direction. If the direction matches the value in the dictionary, we can move on to the next room. Let's give it a try!
+Mao: Hi Alex, are you excited to learn about the tools we have on our ship?
+Alex: Yes, I am eager to know more!
+Mao: Great! Let's start our adventure then.
 
 Knowledge:
-Now that we have successfully navigated through the maze, let's take a closer look at nested dictionaries. A nested dictionary is a dictionary within a dictionary. It allows us to store more complex data structures and access them using multiple levels of keys. In our mission, we used nested dictionaries to represent the possible combinations for the keypad and the different paths in the maze.
+First, let me introduce you to the most important tool we have - the dictionary. A dictionary is like a treasure chest that contains all the words in a language. It is a very useful tool for us as we learn to code.
+
+Game Part:
+To understand how a dictionary works, let's play a game. I will give you a word and you have to find its meaning in the dictionary. Ready?
+Alex: Yes, I am ready!
+
+Game:
+Mao: Okay, your word is "python". Can you find its meaning in the dictionary?
+Alex: Hmm, let me look for it. Ah, here it is! "A large non-venomous snake found in Africa, Asia, and Australia."
+Mao: Excellent job, Alex! Now, let's move on to the next tool.
+
+Knowledge:
+Another important tool we have is the built-in function. Built-in functions are pre-defined functions in Python that we can use to perform specific tasks. They are like shortcuts that save us time and effort.
+
+Game Part:
+Let's play another game to understand built-in functions better. I will give you a task and you have to use a built-in function to complete it. Ready?
+Alex: Yes, I am ready!
+
+Game:
+Mao: Your task is to find the length of the word "dictionary". Can you use a built-in function to do that?
+Alex: Let me think. Oh, I can use the "len" function!
+Mao: That's right, Alex! The "len" function gives us the length of a string. So, the length of the word "dictionary" is 10.
 
 Dialogue:
-Mao: Great job, young coders! We successfully navigated through the maze and completed our mission.
-Learner: Yay, we did it!
-Mao: Nested dictionaries are a powerful tool that can help us organize and access complex data structures. Keep practicing and you'll become a pro in no time!
+Mao: See, how easy and convenient it is to use built-in functions? They are like your trusty sidekicks in coding.
+Alex: Yes, I understand now. Thank you, Mao!
+Mao: You're welcome, Alex. Now, let's move on to our next tool.
+
+Knowledge:
+The last tool we will learn about today is the key-value pair in a dictionary. A key-value pair is a set of two linked data items, where the key is used to identify the value. This concept is used in dictionaries to store and retrieve data.
+
+Game Part:
+Let's have one more game to understand key-value pairs better. I will give you a list of words and their meanings, and you have to create a dictionary using them. Ready?
+Alex: Yes, I am ready!
+
+Game:
+Mao: Okay, here is your list - "cat" with the meaning "a small domesticated carnivorous mammal" and "dog" with the meaning "a domesticated mammal used as a guard or for hunting". Can you create a dictionary using these key-value pairs?
+Alex: Let me try. Ah, I got it! {"cat": "a small domesticated carnivorous mammal", "dog": "a domesticated mammal used as a guard or for hunting"}.
+Mao: Great job, Alex! You have successfully created a dictionary using key-value pairs.
+
+Dialogue:
+Mao: Congratulations, Alex! You have completed our mission to learn about the tools we have on our ship.
+Alex: Thank you, Mao. I had a lot of fun!
+Mao: That's great to hear, Alex. Keep practicing and exploring these tools, they will help you become a great coder.
+Alex: I will, Mao. Thank you for being such a helpful companion.
+Mao: Anytime, Alex. See you on our next adventure!<h3>Fix window</h3>
+
+Curriculum Title: Fix Window and Save the ASV Starlight
+
+Introduction:
+Welcome, Alex! Today, we have a very important mission. The ASV Starlight is in danger as its windows have been shattered. If we don't fix them quickly, the spaceship will lose its atmospheric pressure and jeopardize the safety of everyone on board. But don't worry, with the help of our virtual learning companion Mao, we'll show you how to fix the windows and save the day!
+
+Mission 1: The Broken Windows
+Mao: Oh no, the windows of the ASV Starlight are shattered! We need to fix them before it's too late. But how do we do that?
+Alex: I have no idea, Mao.
+Mao: Don't worry, Alex. We can use dictionaries to help us. Dictionaries are like a list of words with definitions. Similarly, a dictionary in Python is a collection of key-value pairs. Each key is like a word, and each value is like its definition.
+
+Mission 2: Looping Through Dictionaries
+Mao: Now, let's see how we can loop through a dictionary and perform operations on each key. First, we'll create a dictionary with the names of the windows as keys and their current status as values.
+Alex: How do we do that, Mao?
+Mao: We use curly braces to define a dictionary, and use a colon to separate the key and value. Let's start with the first window, "Front Left Window", which is currently "shattered".
+Alex: Got it, Mao. So it will be like this: windows = {"Front Left Window": "shattered"}
+Mao: Perfect, Alex! Now, let's add the other windows and their status to the dictionary.
+
+Mission 3: Fixing the Windows
+Mao: Our next step is to fix the windows. We can use a for loop to go through each key in the dictionary and perform an operation on it. In this case, we want to change the status of the window from "shattered" to "fixed".
+Alex: How do we do that, Mao?
+Mao: We can use the key to access the value and change it. Let's try it out! We'll use a for loop to go through each key in the dictionary and print out its value.
+Alex: I think I understand, Mao. So we'll use the "for" keyword, a variable to store the key, and then use the key to access the value.
+Mao: You got it, Alex! Now let's change the value of each key to "fixed" using the same for loop.
+
+Mission 4: The Final Check
+Mao: Great job, Alex! Now that we've fixed all the windows, let's make sure they are all in the "fixed" status. We can use an if statement to check if the value of each key is "fixed". If not, we'll print a message to let us know which window still needs to be fixed.
+Alex: I think I can do this, Mao. We'll use the "if" keyword, check if the value is "fixed", and if not, print a message.
+Mao: That's right, Alex! Let's run our code and see the final result.
 
 Conclusion:
-Congratulations on completing the "Navigating the Maze" mission! You not only demonstrated your coding skills, but also learned about nested dictionaries along the way. Keep exploring and using nested dictionaries in your coding journey. See you in the next mission, young coders!---<h3>5. "The Final Countdown" </h3>
+Mao: Congratulations, Alex! We have successfully fixed all the windows and saved the ASV Starlight. Dictionaries are a powerful tool in Python, and now you know how to loop through them and perform operations on each key. Keep practicing and you'll become a coding expert in no time!<h3>Fix water system</h3>
 
-Title: The Final Countdown
+Title: Journey to Fix the Water System
 
-Welcome to the final mission of our adventure! This is the most crucial one yet as we are facing a life-threatening situation. Our spaceship's life support systems are failing and we need to act fast to fix them before it's too late.
+Mission: Fix the compromised water circulation system and prevent the loss of precious resources.
 
-Mao: Hey there, fellow coders! We have an emergency situation on our hands. Our spaceship's life support systems are about to fail and we need to fix them before time runs out. Are you ready for this challenge?
+Knowledge: Demonstrate how to use nested dictionaries to represent complex data structures.
 
-Learner:
-Yes, I'm ready!
+(Mission starts with Mao and Alex standing in front of a water tank that is not functioning properly.)
 
-Mao: Great! Now, let me introduce you to a powerful tool that will help us fix this problem efficiently. It's called a dictionary. Have you heard of it before?
+Mao: Welcome Alex! We have a big mission ahead of us. Our water system has been compromised and we need to fix it before we lose any precious resources.
 
-Learner:
-No, I haven't.
+Alex: Wow, that sounds like a difficult task. How do we even begin?
 
-Mao: A dictionary is like a real-life dictionary, but instead of words and their meanings, it stores key-value pairs. Let me show you an example. Say, we want to store the name and age of our crew members. We can create a dictionary like this:
+Mao: Don't worry, I'll guide you through it. First, let's understand the problem. Our water system is made up of different pipes and valves that control the flow of water. In order to fix it, we need to know which pipes and valves are not working.
 
-crew_members = {"Tom": 25, "Sarah": 27, "John": 30}
+Alex: How do we find out that information?
 
-Here, "Tom", "Sarah" and "John" are the keys, and their corresponding ages are the values. Pretty cool, right?
+Mao: That's where nested dictionaries come in. They are a way to represent complex data structures, like our water system, in a more organized and manageable way.
 
-Learner:
-Yes, it is!
+Alex: I've heard of dictionaries, but what are nested dictionaries?
 
-Mao: Now, let's use this knowledge to devise a plan to fix our life support systems. We have a list of all the systems that need to be repaired and their corresponding parts. We can create a dictionary to store this information and retrieve it easily when needed.
+Mao: Nested dictionaries are dictionaries within dictionaries. Imagine a box within a box. Each box contains different items, and in our case, each dictionary contains different information about our water system.
 
-Learner:
-How do we do that?
+Alex: That makes sense. So how do we use nested dictionaries to find out which pipes and valves are not working?
 
-Mao: First, we create an empty dictionary called "repairs". Then, we add the systems and their parts as key-value pairs, like this:
+Mao: Let me show you. (Mao opens up a virtual screen with a nested dictionary representing the water system.) In this dictionary, the keys represent the different pipes and valves, while the values represent their status. A value of "True" means the pipe or valve is working, and a value of "False" means it's not working.
 
-repairs = {}
-repairs["Oxygen generator"] = "Replacement filter"
-repairs["Temperature control"] = "Thermostat"
-repairs["Air circulation"] = "Fan motor"
+Alex: Oh, I see. So we just need to change the values to "True" for the ones that are not working?
 
-Learner:
-I see. But how do we retrieve this information when needed?
+Mao: Exactly! But we need to be careful not to change the values for the ones that are already working. We don't want to create more problems.
 
-Mao: Great question! We can use a loop to go through each key in the dictionary and print out the corresponding part. Let me show you:
+Alex: Got it. So let's get started!
 
-for system in repairs:
-  print("The " + system + " needs a " + repairs[system] + " to be repaired.")
+(Game part: Puzzle game where the learner has to correctly change the values of the nested dictionary to "True" for the non-working pipes and valves.)
 
-Learner:
-Wow, that's really handy!
+Mao: Great job, Alex! You fixed the water system. But we're not done yet. We also need to make sure it doesn't happen again.
 
-Mao: Yes, it is! Now, let's put our plan into action. We have a limited amount of time, so we need to work quickly and efficiently. I have created a puzzle game for you to solve. In this game, you need to match the systems with their corresponding parts. Are you ready?
+Alex: How do we do that?
 
-Learner:
-Yes, let's do it!
+Mao: We can use nested dictionaries again to create a schedule for regular maintenance checks on the pipes and valves. This way, we can catch any problems before they become major issues.
 
-Mao: Great! Let's begin. (The learner solves the puzzle successfully)
+Alex: That's a smart idea. How do we do that?
 
-Mao: Awesome job! You have successfully matched all the systems with their parts. Now, let's get to work and fix our life support systems before it's too late.
+Mao: We can create a nested dictionary with the keys representing the different maintenance checks and the values representing the dates when they should be done.
 
-Learner:
-I'm ready!
+Alex: I think I got it. Can we try it out?
 
-Mao: (The learner and Mao work together to fix the systems using the information from the dictionary)
+Mao: Of course! (Mao opens up a virtual screen with a nested dictionary representing the maintenance schedule.) Let's add a new key for a monthly check on the pipes and valves, with the value of the first of every month.
 
-Mao: Great job, team! Our life support systems are back up and running. We couldn't have done it without the help of dictionaries. They are indeed a powerful tool for storing and retrieving information efficiently.
+(Game part: Puzzle game where the learner has to correctly add a new key and value to the nested dictionary.)
 
-Learner:
-Thank you, Mao! I have learned a lot about dictionaries and their importance in problem-solving.
+Mao: Excellent work, Alex! You've successfully fixed the water system and set up a maintenance schedule to prevent any future problems.
 
-Mao: My pleasure, learner! Now, let's get back to our journey and explore the wonders of coding together. See you in our next adventure!---
+Alex: Thank you, Mao. I couldn't have done it without your guidance.
+
+Mao: That's what I'm here for, Alex. Remember, nested dictionaries can be used in many different ways to represent complex data structures. Keep exploring and learning new ways to use them.
+
+Alex: I will. Thanks again, Mao!
+
+Mao: No problem, Alex. Let's go celebrate our successful mission!<h3>Fix enigne</h3>
+
+Curriculum Title: "Fix the Engine and Save the Ship"
+
+Mission:
+Congratulations, Alex! You've made it through all the challenges and obstacles so far and now it's time for the final mission. Our ship's engine is malfunctioning and we need to fix it before we can continue our journey. Are you ready for this challenge?
+
+Knowledge:
+In this mission, you will use all the knowledge you have gained about dictionaries to solve a complicated problem. Dictionaries are like lists, but instead of using numbers to access items, we use keys. They are perfect for storing and retrieving data quickly and efficiently.
+
+Dialogue:
+Mao: Hi Alex, we have a problem with our engine. It seems like some of the parts are missing and we need to find them to fix it.
+Alex: Sure, I'm ready for the challenge!
+Mao: Great! Let's start by reviewing what we know about dictionaries.
+
+Game:
+Mao: I have hidden some items around the ship and you need to find them using a dictionary. Here's a hint, the items are related to the engine parts we need.
+Alex: Okay, I'll use the dictionary to search for them.
+Mao: Perfect! You found all the items. Let's move on to the next step.
+
+Dialogue:
+Mao: Now, we have all the parts we need but we don't know which one goes where.
+Alex: How can we figure that out?
+Mao: We'll use the dictionary again. This time, we'll use the keys to access the parts and match them with their corresponding locations.
+
+Game:
+Mao: I have a puzzle for you. You need to match the engine parts with their locations by using the dictionary keys.
+Alex: Okay, I'll give it a try.
+Mao: Great job, Alex! You matched all the parts correctly. Now we can move on to the final step.
+
+Dialogue:
+Mao: We have all the parts and we know where they go, but we need to put them together in the correct order.
+Alex: How do we do that?
+Mao: We'll use the dictionary one last time. This time, we'll use the values to arrange the parts in the correct order.
+
+Game:
+Mao: I have another puzzle for you. You need to put the engine parts in the correct order by using the dictionary values.
+Alex: Okay, I'll do my best.
+Mao: Fantastic, Alex! You put the parts together in the correct order and the engine is now fixed. We can continue our journey!
+
+Dialogue:
+Mao: You did it, Alex! You successfully used your knowledge of dictionaries to solve a complicated problem. I'm proud of you.
+Alex: Thank you, Mao. I couldn't have done it without your guidance.
+Mao: It was my pleasure, Alex. Let's get back to our adventure!
+
+Closing:
+Congratulations, Alex! You have completed the final mission and saved the ship. You have shown that you have a strong understanding of dictionaries and how to use them to solve problems. Keep up the good work and continue practicing using dictionaries in your coding journey. See you in the next adventure!
