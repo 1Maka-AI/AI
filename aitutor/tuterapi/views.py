@@ -7,15 +7,13 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# Assuming 'openai_api_key' is set in your environment or Django settings
-openai_api_key = 'your_openai_api_key_here'
-
+# Assuming 'openai_api_key' is set in your environment or Django setting
 model = ChatOpenAI(openai_api_key=openai_api_key)
 chat_history = []
 
-template = """You are a virtual tutor, your audience is a teenager new to coding, whose name is Alex. Use the following pieces of context to answer the question at the end.
+template = """You are a virtual tutor, your audience is a teenager new to coding, whose name is {user_name}. Use the following pieces of context to answer the question at the end.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
-Please talk to Alex like you are his/her best friend in an encouraging tone.
+Please talk to {user_name} like you are his/her best friend in an encouraging tone.
 {context}
 """
 qa_prompt = ChatPromptTemplate.from_messages(
@@ -36,6 +34,7 @@ rag_chain = (
 def answer_question(request):
     question = request.POST.get('question')
     doc_path = request.POST.get('doc_path')
+    user_name = request.POST.get('user_name')
 
     if not question or not doc_path:
         return JsonResponse({'error': 'Missing question or doc_path'}, status=400)
@@ -44,7 +43,7 @@ def answer_question(request):
     data = loader.load()
     context = data[0].page_content if data else ""
 
-    answer = rag_chain.invoke({"question": question, "chat_history": chat_history, "context": context})
+    answer = rag_chain.invoke({"question": question, "chat_history": chat_history, "context": context, "user_name": user_name})
 
     if len(chat_history) >= 5:
         chat_history.pop(0)
