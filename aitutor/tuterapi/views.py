@@ -1,64 +1,53 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from langchain_community.document_loaders import UnstructuredMarkdownLoader
+from langchain_core.messages import HumanMessage
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-from openai import OpenAI
+# Assuming 'openai_api_key' is set in your environment or Django settings
+openai_api_key = 'your_openai_api_key_here'
 
-class AiTutor:
-    def __init__(self, model_name = 'gpt-3.5-turbo', role = 'Tutor', objective = None):
-        '''
-        Args:
-            model_name: default to be 'gpt-3.5-turbo', can be finetuned model as well
-            role：default to be 'Tutor', can be other roles like 'learning company'
-            objective: defualt to be None which means the model will decide the objective, 
-                can be 'summarization', 'debug' and 'question answering'.
-        '''
-        self.model_name = model_name
-        self.role = role
-        self.objective = objective
-        self.client = OpenAI()
-        
-        
-    def ask(self, question, content = ''):
-        message = self._message_generator(content, question) 
-        completion = self.client.chat.completions.create(
-        model=self.model_name,
-        messages=message,
-        )
-        return completion.choices[0].message
-    
-    def _message_generator(self, content, question):
-        msg = []
-        if self.objective and content:
-            msg = [{
-                        "role": "system",
-                        "content": f"You are a {self.role}. Your objective is {self.objective}. You are currently teaching {content}"
-                    }]
-        elif content:
-            msg = [{
-                        "role": "system",
-                        "content": f"You are a {self.role}. You are currently teaching {content}"
-                    }]
-        msg.append({
-                        "role": "user",
-                        "content": f"{question}"
-                    })
-        return msg
+model = ChatOpenAI(openai_api_key=openai_api_key)
+chat_history = []
 
-
-aitutor = AiTutor()
+template = """You are a virtual tutor, your audience is a teenager new to coding, whose name is Alex. Use the following pieces of context to answer the question at the end.
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
+Please talk to Alex like you are his/her best friend in an encouraging tone.
+{context}
+"""
+qa_prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", template),
+        MessagesPlaceholder("chat_history"),
+        ("human", "{question}"),
+    ]
+)
+rag_chain = (
+    qa_prompt
+    | model
+    | StrOutputParser()
+)
 
 @csrf_exempt
-def ask_api(request):
-    if request.method == 'POST':
-        try:
-            request_data = request.POST
-            content = request_data.get('topic')
-            question = request_data.get('question')
-            if question is None:
-                return JsonResponse({"error": "Missing arguments"}, status=400)
-            result = aitutor.ask(content, question) 
-            return JsonResponse(result, status=200)
-        except Exception as e:
-            return JsonResponse({"error": str(e)}, status=500)
-    else:
-        return JsonResponse({"error": "Only POST requests are allowed"}, status=405)
+@require_http_methods(["POST"])
+def answer_question(request):
+    question = request.POST.get('question')
+    doc_path = request.POST.get('doc_path')
+
+    if not question or not doc_path:
+        return JsonResponse({'error': 'Missing question or doc_path'}, status=400)
+
+    loader = UnstructuredMarkdownLoader(doc_path)
+    data = loader.load()
+    context = data[0].page_content if data else ""
+
+    answer = rag_chain.invoke({"question": question, "chat_history": chat_history, "context": context})
+
+    if len(chat_history) >= 5:
+        chat_history.pop(0)
+    chat_history.append(HumanMessage(content=question, response=answer))
+
+    return JsonResponse({'answer': answer})
