@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class request(models.Model):
+  user_id = models.IntField()
+  request_id = models.IntField()
+  question = models.TextField()
+  answer = models.TextField()
