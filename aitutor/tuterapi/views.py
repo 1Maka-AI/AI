@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
+from .models import request
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -34,7 +35,9 @@ rag_chain = (
 def answer_question(request):
     question = request.POST.get('question')
     doc_path = request.POST.get('doc_path')
+    user_id = request.POST.get('user_id')
     user_name = request.POST.get('user_name')
+    request_id = uuid.uuid4()
 
     if not question or not doc_path:
         return JsonResponse({'error': 'Missing question or doc_path'}, status=400)
@@ -48,5 +51,7 @@ def answer_question(request):
     if len(chat_history) >= 5:
         chat_history.pop(0)
     chat_history.append(HumanMessage(content=question, response=answer))
+    request_rd = request(user_id=user_id, request_id=request_id, question=question, answer=answer)
+    request_rd.save()
 
     return JsonResponse({'answer': answer})
